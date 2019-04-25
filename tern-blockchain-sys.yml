@@ -27,10 +27,6 @@ spring:
         nodeRegistryMessage:
           group: tern-blockchain-sys
           content-type: application/json
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8771/eureka/
 server:
   port: 8774
 env: 
