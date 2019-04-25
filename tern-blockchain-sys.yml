@@ -2,8 +2,6 @@ mybatis:
   type-aliases-package: tern.block.blockDTO,tern.block.pojo
   mapper-locations: classpath:mapper/*.xml
 spring:
-  application:
-    name: tern-blockchain-sys
   profiles:
     active: dev
   datasource:
