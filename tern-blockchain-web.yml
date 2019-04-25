@@ -1,0 +1,37 @@
+mybatis:
+  type-aliases-package: tern.block.web.dto
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  rabbitmq:
+    host: 192.168.99.100
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+  zipkin:
+    base-url: http://192.168.99.100:9411/
+  sleuth:
+    sampler:
+      percentage: 1 #所有的数据都发送出去,默认是百分之10
+  cloud:
+    stream:
+      bindings:
+        myMessage:
+          group: tern-blockchain-web
+          content-type: application/json
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/blockChain?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8775
+logging:
+  level:
+    tern.block.web.controller: debug
+    tern.block.web.pool: debug
+env:
+  dev
