@@ -35,3 +35,5 @@ eureka:
       defaultZone: http://localhost:8771/eureka/
 server:
   port: 8774
+env: 
+  dev
