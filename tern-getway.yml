@@ -1,0 +1,63 @@
+mybatis:
+  type-aliases-package: tern.getway.dto
+  mapper-locations: classpath:mapper/*.xml
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/blockChain?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+    host: 127.0.0.1
+    password: 
+    port: 6379
+    jedis:
+     pool:
+        max-active: 30
+        max-idle: 5
+        max-wait: 10
+        min-idle: 3
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    check-template: true
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html; charset=utf-8
+  rabbitmq:
+    host: 192.168.99.100
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: /
+  cloud:
+    stream:
+      bindings:
+        nodeRegistryMessage:
+          group: tern-blockchain-web
+          content-type: application/json
+server:
+  port: 8773
+  use-forward-headers: true
+zuul:
+  routes:
+    tern-blockchain-sys:
+     path: /blockSys/**
+     service-id: tern-getway
+     sensitive-headers: 
+  ignored-patterns:
+  
+management:
+  security:
+    enabled: false
+env:
+  dev
+  
+
+
+
+  
