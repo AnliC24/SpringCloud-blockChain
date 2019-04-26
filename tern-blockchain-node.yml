@@ -17,3 +17,5 @@ spring:
     username: root
 server:
   port: 8777
+env:
+  dev
