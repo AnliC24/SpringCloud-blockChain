@@ -26,8 +26,6 @@ spring:
     check-template: true
     suffix: .html
     encoding: utf-8
-    servlet:
-      content-type: text/html; charset=utf-8
   rabbitmq:
     host: 192.168.99.100
     port: 5672
