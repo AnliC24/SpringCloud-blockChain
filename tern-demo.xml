@@ -56,3 +56,5 @@ pagehelper:
   params: countSql
   reasonable: false
   support-methods-arguments: true
+env:
+  dev
