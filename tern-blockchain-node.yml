@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   rabbitmq:
-    host: 192.168.99.100
+    host: 106.14.211.161
     password: admin
     port: 5672
     username: admin
