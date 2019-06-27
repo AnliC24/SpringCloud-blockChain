@@ -16,7 +16,7 @@ spring:
     password: wang0424
     default-encoding: UTF-8
   rabbitmq:
-    host: 192.168.99.100
+    host: 106.14.211.161
     port: 5672
     username: admin
     password: admin
