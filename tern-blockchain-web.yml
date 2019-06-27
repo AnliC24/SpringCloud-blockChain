@@ -3,7 +3,7 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 spring:
   rabbitmq:
-    host: 192.168.99.100
+    host: 106.14.211.161
     port: 5672
     username: admin
     password: admin
