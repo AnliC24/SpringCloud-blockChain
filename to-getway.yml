@@ -20,12 +20,6 @@ spring:
         max-idle: 5
         max-wait: 10
         min-idle: 3
-  thymeleaf:
-    cache: false
-    prefix: classpath:/templates/
-    check-template: true
-    suffix: .html
-    encoding: utf-8
   rabbitmq:
     host: 106.14.211.161
     port: 5672
